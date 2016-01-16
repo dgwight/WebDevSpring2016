@@ -1,1 +1,1 @@
-This repository is for all assignments and projects from the course CS 4550: Web Development.
+This repository is for all assignments and projects for the course CS 4550: Web Development.
