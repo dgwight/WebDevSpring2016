@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WhiteBoardApp")
+        .module("FormBuilderApp")
         .controller("CourseEditController", CourseEditController);
 
     function CourseEditController($scope, $routeParams) {

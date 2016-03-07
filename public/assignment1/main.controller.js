@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WhiteBoardApp")
+        .module("FormBuilderApp")
         .controller("MainController", MainController);
 
     function MainController($scope, $location) {
