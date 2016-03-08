@@ -1,14 +1,19 @@
 (function(){
     angular
         .module("FormBuilderApp")
-        .controller("FormsController", FormsController);
+        .controller("RegisterController", RegisterController);
 
-    function FormsController($scope, FormsService) {
-        $scope.forms = FormsService.getAllForms();
+    function RegisterController($scope, $location, UserService) {
+        $scope.register = function(username, password, passwordC, email) {
+            if (password == passwordC) {
+                $location.url('/profile');
+                var user = {username: username, password: password, email: email};
+                UserService.createUser(user, setCurrentUser);
+            }
+        };
 
-        $scope.removeForm = function(index) {
-            console.log(index);
-            $scope.forms.splice(index, 1);
+        function setCurrentUser(user) {
+            UserService.setCurrentUser(user);
         }
     }
 })();

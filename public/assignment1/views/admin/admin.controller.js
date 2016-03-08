@@ -6,9 +6,12 @@
     function AdminController($scope, UserService) {
         $scope.users = UserService.getAllUsers();
 
-        $scope.removeUser = function(index) {
-            console.log(index);
-            $scope.users.splice(index, 1);
+        $scope.deleteUserbyId = function(user) {
+            UserService.deleteUserById(user._id);
+        }
+
+        $scope.createUser = function(user) {
+            UserService.deleteUserById(user._id);
         }
     }
 })();

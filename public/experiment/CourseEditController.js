@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("FormBuilderApp")
+        .module("ex")
         .controller("CourseEditController", CourseEditController);
 
     function CourseEditController($scope, $routeParams) {

@@ -1,6 +1,5 @@
 <h1 class="page-header">Admin</h1>
 <h3>Users</h3>
-{{users}}
 <table class="table table-striped table-responsive">
     <thead>
     <tr>
@@ -23,7 +22,7 @@
         <td>{{user.password}}</td>
         <td>{{user.roles}}</td>
         <td>
-            <button ng-click="removeUser($index)" class="btn btn-danger">
+            <button ng-click="deleteUserbyId(user)" class="btn btn-danger">
                 Remove
             </button>
             <a href="#/courseEdit/{{$index}}" class="btn btn-primary">Edit</a>

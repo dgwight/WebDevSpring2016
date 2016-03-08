@@ -17,10 +17,28 @@
                 "username":"ed",     "password":"ed",      "roles": ["student"]        }
         ];
 
+        var service = {
+            getAllUsers: getAllUsers,
+            createUser: createUser,
+            deleteUserById: deleteUserById,
+            setCurrentUser: setCurrentUser,
+            getCurrentUser: getCurrentUser
+        };
+        return service;
+
+        var currentUser = null;
+
+        function setCurrentUser(user) {
+            currentUser = user;
+        }
+
+        function getCurrentUser() {
+            return currentUser;
+        }
+
         function getAllUsers() {
             return users;
         }
-
 
         function findUserByCredentials(username, password, callback) {
             var found = false;
@@ -39,24 +57,22 @@
 
         function createUser(user, callback) {
             user._id = (new Date).getTime();
-            users.append(user);
+            users.push(user);
             callback(user);
         }
 
         function deleteUserById(userId, callback) {
-            for (user in users) {
-                if (user._id == userId) {
-                    users.remove(user);
+            for (var i = 0; i < users.length; i++) {
+                if (users[i]._id === userId) {
+                    users.splice(i, 1);
                 }
             }
             callback(users);
         }
 
         function updateUser(userId, user, callback) {
-            deleteUserById(userId);
-            createUser(user, callback);
+            //deleteUserById(userId);
+            //createUser(user, callback);
         }
-
-
     }
 })();
