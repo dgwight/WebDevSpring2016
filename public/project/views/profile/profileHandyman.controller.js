@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("FormBuilderApp")
+        .module("HandymanApp")
         .controller("ProfileController", ProfileController);
 
     function ProfileController($scope, UserService) {
