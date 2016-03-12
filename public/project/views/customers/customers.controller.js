@@ -14,6 +14,15 @@
                 "address" : "55 Calumet St.",
                 "zipcode" : "02120",
                 "creditCard" : "1111222233334444"
+            },
+            {
+                "username" : "test@aol.com",
+                "password" : "password",
+                "firstName" : "joe",
+                "lastName" : "buck",
+                "address" : "1 Main St.",
+                "zipcode" : "02120",
+                "creditCard" : "1111222233334444"
             }
         ];
 
