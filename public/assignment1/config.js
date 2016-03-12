@@ -24,7 +24,7 @@
                 templateUrl: "views/admin/admin.view.html",
                 controller: "AdminController"
             })
-            .when("/forms", {
+            .when("/search", {
                 templateUrl: "views/forms/forms.view.html",
                 controller: "FormsController"
             })

@@ -1,0 +1,36 @@
+<h1 class="page-header">Hire</h1>
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Handyman:</label>
+        <div class="col-sm-6">
+            <h4> Dylan Wight </h4>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputSkill" class="col-sm-2 control-label">Skill:</label>
+        <div class="col-sm-6">
+            <select class="form-control" id="inputSkill">
+                <option>House Cleaning: $15/hr</option>
+                <option>Yard Work: $15/hr</option>
+                <option>Lawn Mowing: $20/hr</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputDate" class="col-sm-2 control-label">Date:</label>
+        <div class="col-sm-6">
+            <input ng-model="inputDate" type="date" class="form-control" id="inputDate" placeholder="yyyy-mm-dd">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="inputHours" class="col-sm-2 control-label">Hours:</label>
+        <div class="col-sm-6">
+            <input  ng-model="inputHours" type="number" class="form-control" id="inputHours" placeholder="Hours">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+            <a href="#/profileHandyman" type="submit" class="btn btn-default customButton">Hire</a>
+        </div>
+    </div>
+</form>

@@ -103,3 +103,6 @@ body {
     display: inline-block;
     border-radius: 50%;
 }
+.customButton {
+    width: 200px !important;
+}

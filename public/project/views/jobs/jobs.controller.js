@@ -1,67 +1,76 @@
 (function(){
     angular
         .module("HandymanApp")
-        .controller("CustomersController", CustomersController);
+        .controller("JobsController", JobsController);
 
-    function CustomersController($scope) {
+    function JobsController($scope) {
 
-        $scope.customers = [
+        $scope.jobs = [
             {
-                "username" : "dill99pickal@aol.com",
-                "password" : "password",
-                "firstName" : "dylan",
-                "lastName" : "wight",
-                "address" : "55 Calumet St.",
-                "zipcode" : "02120",
-                "creditCard" : "1111222233334444"
+                "customer" : "dill99pickal@aol.com",
+                "handyman" : "wight.d@husky.neu.edu",
+                "date" : new Date(2015, 3, 10),
+                "skill" : "House Cleaning",
+                "rate" : "15",
+                "rating" : "4",
+                "review" : "He was okay."
+            },
+            {
+                "customer" : "dill99pickal@aol.com",
+                "handyman" : "wight.d@husky.neu.edu",
+                "date" : new Date(2015, 3, 8),
+                "skill" : "Lawn Mowing",
+                "rate" : "20",
+                "rating" : "2",
+                "review" : "He left patches."
             }
         ];
 
-        $scope.addCustomer = addCustomer;
-        $scope.removeCustomer = removeCustomer;
-        $scope.selectCustomer = selectCustomer;
-        $scope.updateCustomer = updateCustomer;
+        $scope.addJob = addJob;
+        $scope.removeJob = removeJob;
+        $scope.selectJob = selectJob;
+        $scope.updateJob = updateJob;
 
-        function addCustomer(customer) {
-            var newCustomer = {
-                username   : customer.username,
-                password   : customer.password,
-                firstName  : customer.firstName,
-                lastName   : customer.lastName,
-                address    : customer.address,
-                zipcode    : customer.zipcode,
-                creditCard : customer.creditCard
+        function addJob(job) {
+            var newJob = {
+                customer   : job.customer,
+                handyman   : job.handyman,
+                date       : job.date,
+                skill      : job.skill,
+                rate       : job.rate,
+                rating     : job.rating,
+                review     : job.review
             };
-            $scope.customers.push(newCustomer);
+            $scope.jobs.push(newJob);
         }
 
-        function removeCustomer (customer) {
-            var index = $scope.customers.indexOf(customer);
-            $scope.customers.splice(index, 1);
+        function removeJob (job) {
+            var index = $scope.jobs.indexOf(job);
+            $scope.jobs.splice(index, 1);
         }
 
-        function selectCustomer(index) {
-            $scope.selectedCustomerIndex = index;
-            $scope.customer = {
-                username   : $scope.customers[index].username,
-                password   : $scope.customers[index].password,
-                firstName  : $scope.customers[index].firstName,
-                lastName   : $scope.customers[index].lastName,
-                address    : $scope.customers[index].address,
-                zipcode    : $scope.customers[index].zipcode,
-                creditCard : $scope.customers[index].creditCard
+        function selectJob(index) {
+            $scope.selectedJobIndex = index;
+            $scope.job = {
+                customer   : $scope.jobs[index].customer,
+                handyman   : $scope.jobs[index].handyman,
+                date       : $scope.jobs[index].date,
+                skill      : $scope.jobs[index].skill,
+                rate       : $scope.jobs[index].rate,
+                rating     : $scope.jobs[index].rating,
+                review     : $scope.jobs[index].review
             };
         }
 
-        function updateCustomer(customer) {
-            $scope.customers[$scope.selectedCustomerIndex] = {
-                username   : customer.username,
-                password   : customer.password,
-                firstName  : customer.firstName,
-                lastName   : customer.lastName,
-                address    : customer.address,
-                zipcode    : customer.zipcode,
-                creditCard : customer.creditCard
+        function updateJob(job) {
+            $scope.jobs[$scope.selectedJobIndex] = {
+                customer   : job.customer,
+                handyman   : job.handyman,
+                date       : job.date,
+                skill      : job.skill,
+                rate       : job.rate,
+                rating     : job.rating,
+                review     : job.review
             };
         }
     }

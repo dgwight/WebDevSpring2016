@@ -1,40 +1,55 @@
-<h1 class="page-header">Profile</h1>
-<form class="form-horizontal">
-    <div class="form-group">
-        <label for="inputUsername" class="col-sm-2 control-label">Username:</label>
-        <div class="col-sm-6">
-            <input ng-model="profile.username" type="email" class="form-control" id="inputUsername" placeholder="Username">
-        </div>
+<div class="row">
+<div class="col-lg-2 col-md-3 col-sm-4">
+    <div>
+        <img src="http://www.seteados.com/opcionbox/images/profiles/profile_.jpg"
+            alt="Profile Picture" width="200" height="200">
     </div>
-    <div class="form-group">
-        <label for="changePassword" class="col-sm-2 control-label">Password:</label>
-        <div class="col-sm-6">
-            <input ng-model="profile.password" type="password" class="form-control" id="changePassword" placeholder="Password">
-        </div>
+</div>
+<div class="col-sm-4">
+    <h2>Dylan Wight</h2>
+    <div>
+        <img src="https://www.newbrandanalytics.com/blog/wp-content/uploads/2013/03/3-5-stars.png"
+             class="img-responsive" alt="Rating" width="200" height="50">
     </div>
-    <div class="form-group">
-        <label for="inputFirstName" class="col-sm-2 control-label">First Name:</label>
-        <div class="col-sm-6">
-            <input ng-model="profile.firstName" type="text" class="form-control" id="inputFirstName" placeholder="First Name">
-        </div>
+        <a href="#/hire" type="submit" class="btn btn-default customButton"><h4>Hire</h4></a>
+</div>
+<div class="col-sm-4 ">
+    <h3>Available Skills</h3>
+    <h4>House Cleaning: $15/hr</h4>
+    <h4>Lawn Mowing: $20/hr</h4>
+    <h4>Cleaning: $15/hr</h4>
+</div>
     </div>
-    <div class="form-group">
-        <label for="inputLastName" class="col-sm-2 control-label">Last Name:</label>
-        <div class="col-sm-6">
-            <input ng-model="profile.lastName" type="text" class="form-control" id="inputLastName" placeholder="Last Name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="changeEmail" class="col-sm-2 control-label">Email:</label>
-        <div class="col-sm-6">
-            <input ng-model="profile.email" type="email" class="form-control" id="changeEmail" placeholder="Email">
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-6">
-            <a ng-click="selectCourse()" type="submit" class="btn btn-default">Update</a>
-        </div>
-    </div>
-</form>
-
-
+<div class="row">
+<h3>Jobs</h3>
+<table class="table table-striped table-responsive">
+    <tr>
+            <th><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>Skill</th>
+            <th><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>Date</th>
+            <th><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>Hours</th>
+            <th><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>Rating</th>
+            <th><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>Review</th>
+        </tr>
+        <tr>
+            <td>House Cleaning</td>
+            <td>3/9/2015</td>
+            <td>4</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lawn Mowing</td>
+            <td>3/9/2015</td>
+            <td>3</td>
+            <td>4</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Yard Work</td>
+            <td>6/8/2015</td>
+            <td>3</td>
+            <td>5</td>
+            <td>Lorem.........</td>
+        </tr>
+    </table>
+</div>

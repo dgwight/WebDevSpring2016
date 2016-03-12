@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("FormBuilderApp")
+        .module("HandymanApp")
         .config(Configure);
 
     function Configure($routeProvider) {
@@ -8,29 +8,40 @@
             .when("/home",{
                 templateUrl: "views/home/home.view.html"
             })
-            .when("/register", {
-                templateUrl: "views/users/register.view.html",
-                controller: "RegisterController"
-            })
             .when("/login", {
                 templateUrl: "views/users/login.view.html",
                 controller: "LoginController"
             })
-            .when("/profile", {
-                templateUrl: "views/users/profile.view.html",
-                controller: "ProfileController"
+            .when("/registerCustomer", {
+                templateUrl: "views/users/registerCustomer.view.html",
+                controller: "RegisterCustomerController"
             })
-            .when("/admin", {
-                templateUrl: "views/admin/admin.view.html",
-                controller: "AdminController"
+            .when("/registerHandyman", {
+                templateUrl: "views/users/registerHandyman.view.html",
+                controller: "RegisterHandymanController"
             })
-            .when("/forms", {
-                templateUrl: "views/forms/forms.view.html",
-                controller: "FormsController"
+            .when("/profileHandyman", {
+                templateUrl: "views/profile/profileHandyman.view.html",
+                controller: "ProfileHandymanController"
             })
-            .when("/fields", {
-                templateUrl: "views/forms/fields.view.html",
-                controller: "FieldsController"
+            .when("/hire", {
+                templateUrl: "views/hire/hire.view.html",
+            })
+            .when("/search", {
+                templateUrl: "views/search/search.view.html",
+                controller: "SearchController"
+            })
+            .when("/customers", {
+                templateUrl: "views/customers/customers.view.html",
+                controller: "CustomersController"
+            })
+            .when("/handymen", {
+                templateUrl: "views/handymen/handymen.view.html",
+                controller: "HandymenController"
+            })
+            .when("/jobs", {
+                templateUrl: "views/jobs/jobs.view.html",
+                controller: "JobsController"
             })
             .otherwise({
                 redirectTo: "/home"

@@ -1,17 +1,111 @@
-<h1 class="page-header">Forms</h1>
-<table class="table table-striped table-responsive">
-    <tr>
-        <th><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span> Form Name</th>
-        <th><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span> Action</th>
-    </tr>
-    <tr>
-        <td><input type="text" class="form-control" id="inputFormName" placeholder="name"></td>
-        <td><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
-    </tr>
-    <tr ng-repeat="form in forms">
-        <td><a href="#/fields">{{form.title}}</a></td>
-        <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></td>
-    </tr>
-</table>
+<div class="row">
+    <div class="col-sm-3 sidebar" >
+        <h1 class="page-header">Search</h1>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <select class="form-control" id="addNewField">
+                    <option>What do you need someone to do?</option>
+                    <option>House Cleaning</option>
+                    <option>Yard Work</option>
+                    <option>Snow Plowing</option>
+                    <option>Snow Shoveling</option>
+                    <option>Lawn Mowing</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="zipcodeInput" class="col-sm-6 control-label">Zipcode:</label>
+                <div class="col-sm-6">
+                    <input ng-model="zipcodeInput" type="tel" class="form-control" id="zipcodeInput"
+                           placeholder="Zipcode">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="minRateInput" class="col-sm-6 control-label">Min Rate:</label>
+                <div class="col-sm-6">
+                    <input ng-model="minRateInput" type="number" class="form-control" id="minRateInput"
+                           placeholder="Min Rate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="maxRateInput" class="col-sm-6 control-label">Max Rate:</label>
+                <div class="col-sm-6">
+                    <input ng-model="maxRateInput" type="number" class="form-control" id="maxRateInput"
+                           placeholder="Max Rate">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-9 col-sm-offset-3">
+        <a href="#/profileHandyman">
+            <div class="col-xs-5">
+                <div>
+                    <img src="http://www.seteados.com/opcionbox/images/profiles/profile_.jpg" class="img-responsive"
+                         align="right" alt="Profile Picture" width="200" height="200">
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <h2>Dylan Wight</h2>
+                <div>
+                    <img src="https://www.newbrandanalytics.com/blog/wp-content/uploads/2013/03/3-5-stars.png"
+                         class="img-responsive" alt="Rating" width="200" height="50">
+                </div>
+                <h4>Cleaning: $18/hr</h4>
+                <a href="#/hire" type="submit" class="btn btn-default btn-block"><h4>Hire</h4></a>
+            </div>
+        </a>
+        <a href="#/profileHandyman">
+        <div class="col-xs-5">
+            <div>
+                <img src="http://www.seteados.com/opcionbox/images/profiles/profile_.jpg" class="img-responsive"
+                     align="right" alt="Profile Picture" width="200" height="200">
+            </div>
+        </div>
+        <div class="col-xs-7">
+            <h2>Jane Smith</h2>
+            <div>
+                <img src="https://www.newbrandanalytics.com/blog/wp-content/uploads/2013/03/3-5-stars.png"
+                     class="img-responsive" alt="Rating" width="200" height="50">
+            </div>
+            <h4>Cleaning: $24/hr</h4>
+            <a href="#/hire" type="submit" class="btn btn-default btn-block"><h4>Hire</h4></a>
+        </div>
+        </a>
+        <a href="#/profileHandyman">
+            <div class="col-xs-5">
+                <div>
+                    <img src="http://www.seteados.com/opcionbox/images/profiles/profile_.jpg" class="img-responsive"
+                         align="right" alt="Profile Picture" width="200" height="200">
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <h2>Jonathon Smith</h2>
+                <div>
+                    <img src="https://www.newbrandanalytics.com/blog/wp-content/uploads/2013/03/3-5-stars.png"
+                         class="img-responsive" alt="Rating" width="200" height="50">
+                </div>
+                <h4>Cleaning: $15/hr</h4>
+                <a href="#/hire" type="submit" class="btn btn-default btn-block"><h4>Hire</h4></a>
+            </div>
+        </a>
+        <a href="#/profileHandyman">
+            <div class="col-xs-5">
+                <div>
+                    <img src="http://www.seteados.com/opcionbox/images/profiles/profile_.jpg" class="img-responsive"
+                         align="right" alt="Profile Picture" width="200" height="200">
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <h2>Jonathon Smith</h2>
+                <div>
+                    <img src="https://www.newbrandanalytics.com/blog/wp-content/uploads/2013/03/3-5-stars.png"
+                         class="img-responsive" alt="Rating" width="200" height="50">
+                </div>
+                <h4>Cleaning: $15/hr</h4>
+                <a href="#/hire" type="submit" class="btn btn-default btn-block"><h4>Hire</h4></a>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+</div>
+</div>
