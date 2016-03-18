@@ -12,8 +12,16 @@
             }
         };
 
+        $scope.login = function(loginUsername, loginPassword) {
+            UserService.findUserByCredentials(loginUsername, loginPassword, setCurrentUser);
+            alert(newUser.username);
+        };
+
         function setCurrentUser(user) {
-            UserService.setCurrentUser(user);
+            if (user != null) {
+                UserService.setCurrentUser(user);
+                $location.url('/profile');
+            }
         }
     }
 })();

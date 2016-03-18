@@ -3,36 +3,36 @@
     <div class="form-group">
         <label for="inputUsername" class="col-sm-2 control-label">Username:</label>
         <div class="col-sm-6">
-            <input ng-model="profile.username" type="email" class="form-control" id="inputUsername" placeholder="Username">
+            <input ng-model="user.username" type="text" class="form-control" id="inputUsername" placeholder="Username">
         </div>
     </div>
     <div class="form-group">
         <label for="changePassword" class="col-sm-2 control-label">Password:</label>
         <div class="col-sm-6">
-            <input ng-model="profile.password" type="password" class="form-control" id="changePassword" placeholder="Password">
+            <input ng-model="user.password" type="password" class="form-control" id="changePassword" placeholder="Password">
         </div>
     </div>
     <div class="form-group">
         <label for="inputFirstName" class="col-sm-2 control-label">First Name:</label>
         <div class="col-sm-6">
-            <input ng-model="profile.firstName" type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+            <input ng-model="user.firstName" type="text" class="form-control" id="inputFirstName" placeholder="First Name">
         </div>
     </div>
     <div class="form-group">
         <label for="inputLastName" class="col-sm-2 control-label">Last Name:</label>
         <div class="col-sm-6">
-            <input ng-model="profile.lastName" type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+            <input ng-model="user.lastName" type="text" class="form-control" id="inputLastName" placeholder="Last Name">
         </div>
     </div>
     <div class="form-group">
         <label for="changeEmail" class="col-sm-2 control-label">Email:</label>
         <div class="col-sm-6">
-            <input ng-model="profile.email" type="email" class="form-control" id="changeEmail" placeholder="Email">
+            <input ng-model="user.email" type="email" class="form-control" id="changeEmail" placeholder="Email">
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-6">
-            <a ng-click="selectCourse()" type="submit" class="btn btn-default">Update</a>
+            <a ng-click="update(user)" type="submit" class="btn btn-default">Update</a>
         </div>
     </div>
 </form>

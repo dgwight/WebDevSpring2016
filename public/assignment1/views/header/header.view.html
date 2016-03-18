@@ -12,12 +12,22 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li ng-class="{'active' : $location.url().indexOf('register') != -1}"><a href="#/register">Register</a>
+                <li ng-class="{'active' : $location.url().indexOf('register') != -1,
+                               'hidden' : currentUser() != null}">
+                    <a href="#/register">Register</a>
                 </li>
-                <li ng-class="{'active' : $location.url().indexOf('login') != -1}"><a href="#/login">Login</a></li>
-                <li ng-class="{'active' : $location.url().indexOf('profile') != -1}"><a href="#/profile">Username</a>
+                <li ng-class="{'active' : $location.url().indexOf('login') != -1,
+                               'hidden' : currentUser() != null}">
+                    <a href="#/login">Login</a></li>
+                <li ng-class="{'active' : $location.url().indexOf('profile') != -1,
+                               'hidden' : currentUser() == null}">
+                    <a href="#/profile">{{currentUser().username}}</a>
                 </li>
-                <li ng-class="{'active' : $location.url().indexOf('logout') != -1}"><a href="#/">Logout</a></li>
+                <li ng-class="{'active' : $location.url().indexOf('admin') != -1,
+                               'hidden' : !isAdmin()}">
+                    <a href="#/admin">Admin</a></li>
+                <li ng-class="{'hidden' : currentUser() == null}">
+                    <a ng-click="logout()">Logout</a></li>
             </ul>
         </div>
     </div>

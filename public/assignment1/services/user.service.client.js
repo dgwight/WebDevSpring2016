@@ -22,7 +22,10 @@
             createUser: createUser,
             deleteUserById: deleteUserById,
             setCurrentUser: setCurrentUser,
-            getCurrentUser: getCurrentUser
+            updateUser: updateUser,
+            getCurrentUser: getCurrentUser,
+            findUserByCredentials: findUserByCredentials,
+            isAdmin:isAdmin
         };
         return service;
 
@@ -36,16 +39,28 @@
             return currentUser;
         }
 
+        function isAdmin() {
+            if (currentUser == null) {
+                return false;
+            }
+            for (var i = 0; i < currentUser.roles.length; i++) {
+                if (currentUser.roles[i] === "admin") {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         function getAllUsers() {
             return users;
         }
 
         function findUserByCredentials(username, password, callback) {
             var found = false;
-            for (user in users) {
-                if (user.username == username) {
-                    if (user.password == password) {
-                        callback(user);
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].username === username) {
+                    if (users[i].password === password) {
+                        callback(users[i]);
                         found = true;
                     }
                 }
@@ -71,8 +86,18 @@
         }
 
         function updateUser(userId, user, callback) {
-            //deleteUserById(userId);
-            //createUser(user, callback);
+            var found = false;
+            for (var i = 0; i < users.length; i++) {
+                if (users[i]._id === userId) {
+                    users[i] = user;
+                    alert(user.username);
+                    callback(user);
+                    break;
+                }
+            }
+            if (!found) {
+                callback(null);
+            }
         }
     }
 })();

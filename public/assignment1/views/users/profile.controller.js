@@ -4,8 +4,9 @@
         .controller("ProfileController", ProfileController);
 
     function ProfileController($scope, UserService) {
-            $scope.profile =
+            $scope.user =
             {
+                _id: UserService.getCurrentUser()._id,
                 username: UserService.getCurrentUser().username,
                 password: UserService.getCurrentUser().password,
                 firstName: UserService.getCurrentUser().firstName,
@@ -13,15 +14,12 @@
                 email: UserService.getCurrentUser().email
             };
 
-        $scope.update = function() {
-            var user = {username: profile.username, password: $scope.profile.password,
-                firstName: $scope.profile.firstName, lastName: $scope.profile.lastName,
-                email: $scope.profile.email};
-            UserService.updateUser($scope.currentUser, user, setCurrentUser);
+        $scope.update = function(user) {
+             UserService.updateUser(user._id, user, setCurrentUser);
         };
 
         function setCurrentUser(user) {
-            $scope.currentUser = user;
+            $scope.setCurrentUser(user);
         }
     }
 })();
