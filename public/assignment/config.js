@@ -30,7 +30,7 @@
             })
             .when("/fields", {
                 templateUrl: "views/forms/fields.view.html",
-                controller: "FieldsController"
+                controller: "FormsController"
             })
             .otherwise({
                 redirectTo: "/home"
